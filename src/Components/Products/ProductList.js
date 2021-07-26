@@ -5,7 +5,7 @@ import { setProduct } from "../../features/prdouctsSlice";
 import Product from "./Product";
 
 const ProductList = () => {
-  const products = useSelector((state) => state.product.products);
+  const products = useSelector((state) => state.Allproduct.products);
   const disptach = useDispatch();
   const fetchProducts = async () => {
     const respon = await axios
@@ -17,7 +17,7 @@ const ProductList = () => {
   };
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [products]);
   return (
     <div className="ui grid container">
       <Product />

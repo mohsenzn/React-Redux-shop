@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Product = () => {
-  const products = useSelector((state) => state.product.products);
+  const products = useSelector((state) => state.Allproduct.products);
   const productList = products.map((product) => {
     const { id, title, image, price, category } = product;
     return (
